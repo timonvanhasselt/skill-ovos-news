@@ -526,6 +526,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         phrase = self.remove_voc(phrase, "de")
         phrase = self.remove_voc(phrase, "sv")
         phrase = self.remove_voc(phrase, "nl")
+        phrase = self.remove_voc(phrase, "be")
         phrase = self.remove_voc(phrase, "en")
 
         return phrase.strip()
