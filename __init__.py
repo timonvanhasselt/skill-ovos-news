@@ -436,7 +436,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "uri": "https://cdn.nos.nl/content/radio/ditisdenieuweurlvoorhetradiobulletinvoorgooglevanafjuli2019.mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
-                "image": join(dirname(__file__), "ui", "images", "nos.png"),
+                "image": join(dirname(__file__), "ui", "images", "nos.jpg"),
                 "playback": PlaybackType.AUDIO
             }
         },
