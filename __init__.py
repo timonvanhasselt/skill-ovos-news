@@ -22,6 +22,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "en-ca": "CBC",
         "it-it": "GR1",
         "de-de": "DLF - Die Nachrichten"
+        "nl-nl": "NOS"
+        "nl-be": "VRT"
     }
     # all news streams
     lang2news = {
@@ -418,13 +420,23 @@ class NewsSkill(OVOSCommonPlaybackSkill):
                 "playback": PlaybackType.AUDIO
             }
         },
-        "nl-nl": {
+        "nl-be": {
             "VRT": {
                 "aliases": ["VRT Nieuws", "VRT"],
                 "uri": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3",
                 "media_type": MediaType.NEWS,
                 "match_types": [MediaType.NEWS],
                 "image": join(dirname(__file__), "ui", "images", "vrt.png"),
+                "playback": PlaybackType.AUDIO
+            }
+        },
+        "nl-nl": {
+            "NOS": {
+                "aliases": ["NOS Nieuws", "NOS journaal", "NOS"],
+                "uri": "https://cdn.nos.nl/content/radio/ditisdenieuweurlvoorhetradiobulletinvoorgooglevanafjuli2019.mp3",
+                "media_type": MediaType.NEWS,
+                "match_types": [MediaType.NEWS],
+                "image": join(dirname(__file__), "ui", "images", "nos.png"),
                 "playback": PlaybackType.AUDIO
             }
         },
@@ -534,6 +546,8 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             langs.append("es-es")
         if self.voc_match(phrase, "de"):
             langs.append("de-de")
+       if self.voc_match(phrase, "be"):
+            langs.append("nl-be")
         if self.voc_match(phrase, "nl"):
             langs.append("nl-nl")
         if self.voc_match(phrase, "fi"):
