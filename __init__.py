@@ -23,7 +23,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "it-it": "GR1",
         "de-de": "DLF - Die Nachrichten"
         "nl-nl": "NOS"
-        "nl-be": "VRT"
     }
     # all news streams
     lang2news = {
@@ -526,7 +525,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         phrase = self.remove_voc(phrase, "de")
         phrase = self.remove_voc(phrase, "sv")
         phrase = self.remove_voc(phrase, "nl")
-        phrase = self.remove_voc(phrase, "be")
         phrase = self.remove_voc(phrase, "en")
 
         return phrase.strip()
@@ -547,8 +545,6 @@ class NewsSkill(OVOSCommonPlaybackSkill):
             langs.append("es-es")
         if self.voc_match(phrase, "de"):
             langs.append("de-de")
-       if self.voc_match(phrase, "be"):
-            langs.append("nl-be")
         if self.voc_match(phrase, "nl"):
             langs.append("nl-nl")
         if self.voc_match(phrase, "fi"):
