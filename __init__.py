@@ -21,7 +21,7 @@ class NewsSkill(OVOSCommonPlaybackSkill):
         "en-au": "ABC",
         "en-ca": "CBC",
         "it-it": "GR1",
-        "de-de": "DLF - Die Nachrichten"
+        "de-de": "DLF - Die Nachrichten",
         "nl-nl": "NOS"
     }
     # all news streams
